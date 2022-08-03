@@ -1,0 +1,13 @@
+@tier1 = 30
+@tier2 = 20
+@tier3 = 10
+
+leader_traits = {
+	NOR_yanchen_trait = {
+		sprite = 13
+		production_speed_arms_factory_factor = 0.2
+		industrial_capacity_factory = 0.05
+		communism_drift = 0.06
+	}
+
+}

@@ -1,0 +1,207 @@
+add_namespace = NOR_new_events
+
+#不稳定的内政
+country_event = {
+	id = NOR_new_events.1
+	title = NOR_new_events.1.t
+	desc = NOR_new_events.1.d
+	picture = GFX_report_event_hitler_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NOR_new_events.1.a
+		add_ideas = NOR_unstable_political_1
+	}
+	
+	option = {
+		name = NOR_new_events.1.b
+		add_ideas = NOR_unstable_political_2
+	}
+	option = {
+		name = NOR_new_events.1.c
+		add_ideas = NOR_unstable_political_3
+	}
+}
+#最后的警告
+country_event = {
+	id = NOR_new_events.2
+	title = NOR_new_events.2.t
+	desc = NOR_new_events.2.d
+	picture = GFX_report_event_hitler_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NOR_new_events.2.a
+		set_cosmetic_tag = NOR_norway_republic
+		add_country_leader_role = {
+			character = NOR_Alexander_Mikhaillovich_Lillia
+			promote_leader = yes
+			country_leader = {
+				ideology = socialism
+				expire = "1965.1.1"
+			}
+		}
+		add_country_leader_role = {
+			character = NOR_Alexander_Mikhaillovich_Lillia
+			promote_leader = yes
+			country_leader = {
+				ideology = despotism
+				expire = "1965.1.1"
+			}
+		}
+	}
+	
+}
+#黎明到来
+country_event = {
+	id = NOR_new_events.3
+	title = NOR_new_events.3.t
+	desc = NOR_new_events.3.d
+	picture = GFX_report_event_hitler_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NOR_new_events.3.a
+		create_faction = NOR_lillia_fedration
+	}
+	option = {
+		name = NOR_new_events.3.b
+		create_faction = NOR_alliance_of_new_norway_republic
+	}
+	
+}
+#艰难的复辟
+country_event = {
+	id = NOR_new_events.4
+	title = NOR_new_events.4.t
+	desc = NOR_new_events.4.d
+	picture = GFX_report_event_hitler_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NOR_new_events.4.a
+		set_cosmetic_tag = NOR_norway_democratic
+		add_country_leader_role = {
+			character = NOR_Philippe_Leclerc_R_Hane_name
+			promote_leader = yes
+			country_leader = {
+				ideology = conservatism
+				expire = "1965.1.1"
+			}
+		}
+		add_country_leader_role = {
+			character = NOR_Philippe_Leclerc_R_Hane_name
+			promote_leader = yes
+			country_leader = {
+				ideology = despotism
+				expire = "1965.1.1"
+			}
+		}
+	}
+	
+}
+country_event = {
+	id = NOR_new_events.5
+	title = NOR_new_events.5.t
+	desc = NOR_new_events.5.d
+	picture = GFX_report_event_hitler_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NOR_new_events.5.a
+		add_ideas = NOR_glory_franconia_1
+	}
+	option = {
+		name = NOR_new_events.5.b
+		add_ideas = NOR_glory_franconia_2
+	}
+	
+}
+country_event = {
+	id = NOR_new_events.6
+	title = NOR_new_events.6.t
+	desc = NOR_new_events.6.d
+	picture = GFX_report_event_hitler_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NOR_new_events.6.a
+		create_faction = NOR_rinhane_overdemocraticism
+		add_stability = 0.2
+		add_war_support = 0.2
+	}
+	option = {
+		name = NOR_new_events.6.b
+		create_faction = NOR_rinhane_new_democratic
+		add_stability = 0.2
+		add_war_support = 0.2
+	}
+	option = {
+		name = NOR_new_events.6.c
+		trigger = {
+			ENG = {
+				is_faction_leader = yes
+			}
+		}
+		add_to_faction = ENG
+		add_stability = 0.2
+		add_war_support = 0.2
+	}
+	
+}
+country_event = {
+	id = NOR_new_events.7
+	title = NOR_new_events.7.t
+	desc = NOR_new_events.7.d
+	picture = GFX_report_event_hitler_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NOR_new_events.7.a
+		set_cosmetic_tag = NOR_norway_empire
+		add_country_leader_role = {
+			character = NOR_Erich_von_ShiromiyaNana_name
+			promote_leader = yes
+			country_leader = {
+				ideology = fascism_ideology
+				expire = "1965.1.1"
+			}
+		}
+		add_country_leader_role = {
+			character = NOR_Erich_von_ShiromiyaNana_name
+			promote_leader = yes
+			country_leader = {
+				ideology = despotism
+				expire = "1965.1.1"
+			}
+		}
+	}
+	
+}
+country_event = {
+	id = NOR_new_events.8
+	title = NOR_new_events.8.t
+	desc = NOR_new_events.8.d
+	picture = GFX_report_event_hitler_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = NOR_new_events.8.a
+		create_faction = NOR_ShiromiyaNana_Empire
+		add_ideas = NOR_nana_empire
+	}
+	option = {
+		name = NOR_new_events.8.b
+		create_faction = NOR_New_Norway_Empire
+		add_ideas = NOR_nana_empire
+	}
+	
+}
