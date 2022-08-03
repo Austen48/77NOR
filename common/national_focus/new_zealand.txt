@@ -1,0 +1,1431 @@
+﻿focus_tree = {
+	id = norway_qiqi_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = NOR
+		}
+
+
+	}
+	continuous_focus_position = { x = 50 y = 2500 }
+	default = no
+
+
+	focus = {
+		id = NOR_dark_before_the_dawn
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 16
+		y = 0
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = NOR_worldline_of_non_exist
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_dark_before_the_dawn
+		}
+		relative_position_id = NOR_dark_before_the_dawn
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_political_power = 200
+			add_ideas = NOR_withdrawn_leader
+		}
+	}
+	focus = {
+		id = NOR_crisis_in_the_future
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = -2
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_dark_before_the_dawn
+		}
+		relative_position_id = NOR_dark_before_the_dawn
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			country_event = {
+				id = NOR_new_events.1
+			}
+		}
+	}
+	focus = {
+		id = NOR_the_storm_wave_boat
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 2
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_dark_before_the_dawn
+		}
+		relative_position_id = NOR_dark_before_the_dawn
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_ideas = NOR_danger_income
+		}
+	}
+	focus = {
+		id = NOR_the_fate_of_the_final_end
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_crisis_in_the_future
+		}
+		prerequisite = {
+			focus = NOR_worldline_of_non_exist
+		}
+		prerequisite = {
+			focus = NOR_the_storm_wave_boat
+		}
+		relative_position_id = NOR_worldline_of_non_exist
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_manpower = 100000
+			add_tech_bonus = {
+				category = industry
+				bonus = 1
+				uses = 1
+			}
+			add_tech_bonus = {
+				category = construction_tech
+				bonus = 1
+				uses = 1
+			}
+		}
+	}
+	focus = {
+		id = NOR_emperor_of_glories
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = -14
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_the_fate_of_the_final_end
+		}
+		relative_position_id = NOR_the_fate_of_the_final_end
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			remove_ideas = NOR_haakon_VII
+			country_event = {
+				id = NOR_new_events.2
+			}
+		}
+	}
+	focus = {
+		id = NOR_red_empire_of_western
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_emperor_of_glories
+		}
+		relative_position_id = NOR_emperor_of_glories
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			is_subject = no
+			democratic < 0.7
+			communism > 0.1
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 10
+			}
+			add_timed_idea = {
+				idea = NOR_International
+				days = 720
+			}
+		}
+	}
+
+	focus = {
+		id = NOR_weakness_of_cabnient
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_red_empire_of_western
+		}
+		relative_position_id = NOR_red_empire_of_western
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOR_Alexander_Mikhaillovich_yanchen
+			remove_ideas = NOR_withdrawn_leader
+		}
+	}
+	focus = {
+		id = NOR_Volga_Distillery
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = -2
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_weakness_of_cabnient
+		}
+		relative_position_id = NOR_weakness_of_cabnient
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = NOR_Alexander_Mikhaillovich_yanchen_name
+			remove_ideas = NOR_withdrawn_leader
+		}
+	}
+	focus = {
+		id = NOR_the_attempt_of_red_exploration
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_weakness_of_cabnient
+		}
+		relative_position_id = NOR_weakness_of_cabnient
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			has_government = communism
+		}
+		completion_reward = {
+			country_event = {
+				id = NOR_new_events.3
+			}
+			add_ideas = NOR_the_attempt_of_red_exploration_idea
+		}
+	}
+	focus = {
+		id = NOR_declaration_of_unity
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_the_attempt_of_red_exploration
+		}
+		relative_position_id = NOR_the_attempt_of_red_exploration
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_danger_income
+				add_idea = NOR_power_of_people
+			}
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = NOR_eve_of_reform
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_declaration_of_unity
+		}
+		relative_position_id = NOR_declaration_of_unity
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		completion_reward = {
+			144 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			142 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			110 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = NOR_warning_on_southern
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_eve_of_reform
+		}
+		relative_position_id = NOR_eve_of_reform
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		completion_reward = {
+			144 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			142 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			110 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = NOR_red_Trendelag
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_eve_of_reform
+		}
+		relative_position_id = NOR_eve_of_reform
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		completion_reward = {
+			143 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+				}
+			}
+		}
+	}
+	focus = {
+		id = NOR_day_of_country_founding
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 2
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_eve_of_reform
+		}
+		relative_position_id = NOR_eve_of_reform
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			has_idea = NOR_country_of_dawn
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_country_of_dawn
+				add_idea = NOR_brightness_of_emperor
+			}
+		}
+	}
+	focus = {
+		id = NOR_future
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 6
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_day_of_country_founding
+			#多前置s
+		}
+		relative_position_id = NOR_day_of_country_founding
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 150
+			add_manpower = 20000
+			110 = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = NOR_new_railway_company
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 8
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_emperor_of_glories
+			#多可选前置
+		}
+		relative_position_id = NOR_emperor_of_glories
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			build_railway = {
+				level = 2
+				build_only_on_allied = yes
+				start_province = 11206
+				target_province = 6115
+			}
+			build_railway = {
+				level = 2
+				build_only_on_allied = yes
+				start_state = 143
+				target_state = 144
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 10
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 200
+			}
+		}
+	}
+	focus = {
+		id = NOR_norway_steel_industry
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = -2
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_new_railway_company
+		}
+		relative_position_id = NOR_new_railway_company
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			144 = {
+				if = {
+					limit = {
+						OR = {
+							has_tech = steel_production_1
+							can_research = steel_production_1
+							is_researching_technology = steel_production_1
+						}
+					}
+					add_building_construction = {
+						type = steel_mill
+						level = 2
+					}
+				}
+				else = {
+					add_resource = {
+						type = steel
+						amount = 12
+						state = THIS
+					}
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_tech_bonus = {
+				category = industry
+				uses = 1
+				bonus = 1
+			}
+		}
+	}
+	focus = {
+		id = NOR_red_aid
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = -4
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_norway_steel_industry
+		}
+		prerequisite = {
+			focus = NOR_weakness_of_cabnient
+		}
+		relative_position_id = NOR_norway_steel_industry
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			110 = {
+				if = {
+					limit = {
+						OR = {
+							has_tech = steel_production_1
+							can_research = steel_production_1
+							is_researching_technology = steel_production_1
+						}
+					}
+					add_building_construction = {
+						type = steel_mill
+						level = 4
+					}
+				}
+				else = {
+					add_resource = {
+						type = steel
+						amount = 24
+						state = THIS
+					}
+				}
+			}
+			add_extra_state_shared_building_slots = 4
+			add_tech_bonus = {
+				category = construction_tech
+				uses = 1
+				bonus = 1
+			}
+		}
+	}
+	focus = {
+		id = NOR_bobosa_tech_theory
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 2
+		y = 2
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_red_aid
+		}
+		relative_position_id = NOR_red_aid
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = infantry_weapons
+				bonus = 1
+				uses = 2
+			}
+		}
+	}
+	focus = {
+		id = NOR_T34_military_theory
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 3
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_red_aid
+		}
+		prerequisite = {
+			focus = NOR_eve_of_reform
+		}
+		relative_position_id = NOR_red_aid
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = cat_medium_armor
+				bonus = 1
+				uses = 2
+			}
+		}
+	}
+	focus = {
+		id = NOR_launcher_of_the_red
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 2
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_new_railway_company
+		}
+		prerequisite = {
+			focus = NOR_base_of_the_wooden_industrial
+		}
+		relative_position_id = NOR_new_railway_company
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_disarmament_policy
+				add_idea = NOR_country_of_dawn
+			}
+		}
+	}
+	focus = {
+		id = NOR_road_to_the_dawn
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_launcher_of_the_red
+		}
+		relative_position_id = NOR_launcher_of_the_red
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = NOR_brown_bear_code
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_road_to_the_dawn
+		}
+		prerequisite = {
+			focus = NOR_T34_military_theory
+		}
+		prerequisite = {
+			focus = NOR_bobosa_tech_theory
+		}
+		relative_position_id = NOR_launcher_of_the_red
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = NOR_light_in_the_dark
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 10
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_emperor_of_glories
+			#多前置国策
+		}
+		relative_position_id = NOR_emperor_of_glories
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			144 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			142 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			110 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = NOR_base_of_the_wooden_industrial
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_light_in_the_dark
+		}
+		relative_position_id = NOR_light_in_the_dark
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			143 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			110 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = NOR_rubber_industrial
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 2
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_base_of_the_wooden_industrial
+		}
+		prerequisite = {
+			focus = NOR_talk_with_france
+		}
+		relative_position_id = NOR_base_of_the_wooden_industrial
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			143 = {
+				add_extra_state_shared_building_slots = 4
+				add_resource = {
+					type = rubber
+					amount = 16
+					state = THIS
+				}
+			}
+			142 = {
+				add_resource = {
+					type = rubber
+					amount = 8
+					state = THIS
+				}
+			}
+			895 = {
+				add_resource = {
+					type = rubber
+					amount = 8
+					state = THIS
+				}
+			}
+		}
+	}
+	focus = {
+		id = NOR_blue_aid
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_rubber_industrial
+		}
+		relative_position_id = NOR_rubber_industrial
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			110 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+				}
+				add_resource = {
+					type = rubber
+					amount = 8
+					state = THIS
+				}
+			}
+			add_tech_bonus = {
+				category = construction_tech
+				bonus = 1
+				uses = 1
+			}
+		}
+	}
+	focus = {
+		id = NOR_knight_of_glories
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 2
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_the_fate_of_the_final_end
+		}
+		relative_position_id = NOR_the_fate_of_the_final_end
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			remove_ideas = NOR_haakon_VII
+			country_event = {
+				id = NOR_new_events.4
+			}
+
+		}
+	}
+	focus = {
+		id = NOR_pursuer_of_whiteism
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 2
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_knight_of_glories
+		}
+		relative_position_id = NOR_knight_of_glories
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_danger_income
+				add_idea = NOR_franch_fanatic
+			}
+		}
+	}
+	focus = {
+		id = NOR_glory_franconia
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 2
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_pursuer_of_whiteism
+		}
+		relative_position_id = NOR_pursuer_of_whiteism
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			country_event = {
+				id = NOR_new_events.5
+			}
+		}
+	}
+	focus = {
+		id = NOR_talk_with_british
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_glory_franconia
+		}
+		relative_position_id = NOR_glory_franconia
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = NOR_talk_with_france
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 2
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_glory_franconia
+		}
+		relative_position_id = NOR_glory_franconia
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = NOR_the_guide_from_alliance_of_justice
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 1
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_talk_with_british
+		}
+		prerequisite = {
+			focus = NOR_talk_with_france
+		}
+		relative_position_id = NOR_talk_with_british
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			895 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			110 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			142 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			add_tech_bonus = {
+				category = air_equipment
+				bonus = 1
+				uses = 2
+			}
+		}
+	}
+	focus = {
+		id = NOR_the_third_person_of_alliance
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_the_guide_from_alliance_of_justice
+		}
+		relative_position_id = NOR_the_guide_from_alliance_of_justice
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			has_government = democratic
+		}
+		completion_reward = {
+			add_political_power = 150
+			country_event = {
+				id = NOR_new_events.6
+			}
+		}
+	}
+	focus = {
+		id = NOR_tripartite_treaty
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_the_third_person_of_alliance
+		}
+		relative_position_id = NOR_the_third_person_of_alliance
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_withdrawn_leader
+				add_idea = NOR_avant_garde_thinker
+			}
+		}
+	}
+	focus = {
+		id = NOR_the_light_of_dunkirk
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_tripartite_treaty
+		}
+		relative_position_id = NOR_tripartite_treaty
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		completion_reward = {
+			142 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			895 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			110 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			add_tech_bonus = {
+				category = industry
+				uses = 1
+				bonus = 1
+			}
+		}
+	}
+	focus = {
+		id = NOR_time_to_oath
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_the_light_of_dunkirk
+		}
+		relative_position_id = NOR_the_light_of_dunkirk
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			has_idea = NOR_country_of_dawn
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = NOR_afterglow_of_british_empire
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 2
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_tripartite_treaty
+		}
+		prerequisite = {
+			focus = NOR_blue_aid
+		}
+		relative_position_id = NOR_blue_aid
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				category = air_equipment
+				uses = 2
+				bonus = 1
+			}
+			add_tech_bonus = {
+				category = para_tech
+				uses = 2
+				bonus = 1
+			}
+			add_tech_bonus = {
+				category = air_doctrine
+				uses = 2
+				bonus = 0.5
+			}
+			air_experience = 125
+		}
+	}
+	focus = {
+		id = NOR_jellyfish_code
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = -2
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_road_to_the_dawn
+		}
+		prerequisite = {
+			focus = NOR_afterglow_of_british_empire
+		}
+		relative_position_id = NOR_afterglow_of_british_empire
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = NOR_cowardly_queen
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 14
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_the_fate_of_the_final_end
+		}
+		relative_position_id = NOR_the_fate_of_the_final_end
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_political_power = 150
+			remove_ideas = NOR_haakon_VII
+			country_event = {
+				id = NOR_new_events.7
+			}
+			add_ideas = NOR_worship_of_queen
+		}
+	}
+	focus = {
+		id = NOR_black_revolution
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_cowardly_queen
+		}
+		relative_position_id = NOR_cowardly_queen
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_manpower = 20000
+			add_tech_bonus = {
+				category = artillery
+				uses = 1
+				bonus = 1
+			}
+			add_tech_bonus = {
+				category = infantry_weapons
+				bonus = 1
+				uses = 1
+			}
+		}
+	}
+	focus = {
+		id = NOR_norway_tech_industrial
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = -2
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_black_revolution
+		}
+		relative_position_id = NOR_black_revolution
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			110 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			142 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			895 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = NOR_Trendelag_industrial_base
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 2
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_black_revolution
+		}
+		relative_position_id = NOR_black_revolution
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			143 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+				}
+			}
+		}
+	}
+	focus = {
+		id = NOR_dahayu_tactic
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_black_revolution
+		}
+		relative_position_id = NOR_black_revolution
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_ideas = NOR_dahayu
+		}
+	}
+	focus = {
+		id = NOR_northern_assassin
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_Trendelag_industrial_base
+		}
+		prerequisite = {
+			focus = NOR_dahayu_tactic
+		}
+		prerequisite = {
+			focus = NOR_norway_tech_industrial
+		}
+		relative_position_id = NOR_dahayu_tactic
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			country_event = {
+				id = NOR_new_events.8
+			}
+		}
+	}
+	focus = {
+		id = NOR_black_declaration
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_northern_assassin
+		}
+		relative_position_id = NOR_northern_assassin
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_danger_income
+				add_idea = NOR_bitter_beginning
+			}
+		}
+	}
+	focus = {
+		id = NOR_book_of_non_exist
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_black_declaration
+		}
+		relative_position_id = NOR_black_declaration
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NOR_danger_income
+				add_idea = NOR_bitter_beginning
+			}
+		}
+	}
+	focus = {
+		id = NOR_empire_leviathan_plan
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 2
+		y = 1
+
+		cost = 5
+		prerequisite = {
+			focus = NOR_Trendelag_industrial_base
+		}
+		relative_position_id = NOR_Trendelag_industrial_base
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			143 = {
+				add_extra_state_shared_building_slots = 4
+				add_resource = {
+					type = steel
+					amount = 16
+					state = THIS
+				}
+				add_resource = {
+					type = aluminium
+					amount = 16
+					state = THIS
+				}
+			}
+			142 = {
+				add_resource = {
+					type = steel
+					amount = 8
+					state = THIS
+				}
+				add_resource = {
+					type = aluminium
+					amount = 8
+					state = THIS
+				}
+			}
+			895 = {
+				add_resource = {
+					type = steel
+					amount = 8
+					state = THIS
+				}
+				add_resource = {
+					type = aluminium
+					amount = 8
+					state = THIS
+				}
+			}
+		}
+	}
+}		

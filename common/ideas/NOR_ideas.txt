@@ -1,0 +1,303 @@
+ideas = {
+	country= {
+		NOR_withdrawn_leader = { 
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				conscription_factor = -0.05
+			}
+		}
+		NOR_curiosity_of_queen = { 
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				mobilization_speed = 0.1
+				conscription_factor = 0.05
+				winter_attrition_factor = -0.5
+				acclimatization_cold_climate_gain_factor = 0.5
+				planning_speed = 0.1
+				
+				
+			}
+		}
+		NOR_worship_of_queen = { 
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				fascism_drift = 0.3
+			}
+		}
+		NOR_avant_garde_thinker = { 
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.1
+				conscription_factor = 0.15
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		NOR_haakon_VII = { 
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.15
+			}
+		}
+		NOR_disarmament_policy = { 
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.03
+				conversion_cost_civ_to_mil_factor = 0.5
+				production_factory_max_efficiency_factor = -0.1
+				industrial_capacity_factory = -0.5
+				industrial_capacity_dockyard = -0.2
+				production_speed_arms_factory_factor = -0.5
+				production_speed_dockyard_factor = -0.2
+			}
+		}
+		NOR_country_of_dawn = { 
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.1
+				conversion_cost_civ_to_mil_factor = 0.2
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.1
+				production_speed_arms_factory_factor = -0.2
+				production_speed_dockyard_factor = -0.1
+			}
+		}
+		NOR_brightness_of_knight = { 
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				conscription_factor = 0.2
+				production_factory_max_efficiency_factor = 0.2
+				army_org_regain = 0.05
+				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+		NOR_brightness_of_emperor = { 
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.2
+				conversion_cost_civ_to_mil_factor = -0.1
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+			}
+		}
+		NOR_happy_time = {
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = 0.15
+				conscription_factor = 0.05
+				army_org_regain = 0.1
+			}
+		}
+		NOR_Aftermath_of_Great_Depression = { 
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = 0.09
+				industrial_capacity_factory = -0.09
+				industrial_capacity_dockyard = -0.09
+			}
+		}
+		NOR_International = { 
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				justify_war_goal_time = -0.11
+				communism_drift = 0.11
+				conscription_factor = 0.05
+			}
+		}
+		NOR_the_attempt_of_red_exploration_idea = { 
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = 0.2
+				war_support_factor = 0.2
+				conscription_factor = 0.1
+			}
+		}
+		NOR_unstable_political_1 = { 
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				conscription_factor = 0.1
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+		NOR_unstable_political_2 = { 
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				conscription_factor = 0.05
+			}
+		}
+		NOR_unstable_political_3 = { 
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				conscription_factor = -0.05
+				production_factory_max_efficiency_factor = 0.2
+			}
+		}
+		NOR_danger_income = { 
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = 0.2
+			}
+		}
+		NOR_bitter_beginning = { 
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				conscription_factor = 0.1
+				production_factory_max_efficiency_factor = 0.2
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = 0.2
+				industrial_capacity_factory = 0.2
+				stability_factor = -0.1
+			}
+		}
+		NOR_franch_fanatic = { 
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				consumer_goods_factor = -0.2
+				conversion_cost_civ_to_mil_factor = 0.3
+				industrial_capacity_factory = 0.1
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		NOR_glory_franconia_1 = { 
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				army_org_regain = 0.05
+				conscription_factor = 0.1
+			}
+		}
+		NOR_glory_franconia_2 = { 
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				army_org_regain = 0.05
+				conscription_factor = 0.1
+			}
+		}
+
+		NOR_power_of_people = { 
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				conscription_factor = 0.05
+				army_org_regain = 0.1
+			}
+		}
+		NOR_dahayu = { 
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				conscription_factor = 0.2
+				war_support_factor = 0.2
+				stability_factor = 0.2
+			}
+		}
+		NOR_nana_empire = { 
+			picture = SOV_second_five_year_plan
+			
+			allowed = {
+				always = no
+			}
+			modifier = {
+				conscription_factor = 0.2
+				war_support_factor = 0.2
+				stability_factor = 0.2
+			}
+		}
+	}
+}
